@@ -1,7 +1,7 @@
-'use client'
+'use client';
 
-import { Menu } from "lucide-react"
-import Logo from "./Logo"
+import { Menu } from 'lucide-react';
+import Logo from './Logo';
 
 const Navbar = () => {
   return (
@@ -14,7 +14,7 @@ const Navbar = () => {
       "
     >
       <div
-      className="
+        className="
         flex
         gap-4
         items-center
@@ -22,12 +22,12 @@ const Navbar = () => {
         "
       >
         <button>
-          <Menu/>
+          <Menu />
         </button>
-          <Logo/>
+        <Logo />
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Navbar
+export default Navbar;
