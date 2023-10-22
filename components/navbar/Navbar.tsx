@@ -2,6 +2,7 @@
 
 import { Menu } from 'lucide-react';
 import Logo from './Logo';
+import { Button } from '../Button';
 
 const Navbar = () => {
   return (
@@ -21,9 +22,9 @@ const Navbar = () => {
         flex-shrink-0
         "
       >
-        <button>
+        <Button variant="ghost" size="icon">
           <Menu />
-        </button>
+        </Button>
         <Logo />
       </div>
     </div>
