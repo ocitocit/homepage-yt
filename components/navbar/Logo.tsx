@@ -7,12 +7,12 @@ const Logo = () => {
   const router = useRouter()
   return (
   <Image
-      onClick={router.push('/')}
+      onClick={()=>router.push('/')}
       alt="logo"
       src="/ytlogo.png"
       width="100"
       height="100"
-      className="cursor-pointer"
+      className="cursor-pointer h-6"
       />
   )
 }

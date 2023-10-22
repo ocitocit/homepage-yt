@@ -1,5 +1,6 @@
 'use client'
 
+import { Menu } from "lucide-react"
 import Logo from "./Logo"
 
 const Navbar = () => {
@@ -20,10 +21,10 @@ const Navbar = () => {
         flex-shrink-0
         "
       >
-        <button></button>
-        <div className="h-6">
+        <button>
+          <Menu/>
+        </button>
           <Logo/>
-        </div>
       </div>
     </div>
   )
