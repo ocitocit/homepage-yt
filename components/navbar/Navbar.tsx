@@ -1,10 +1,13 @@
 'use client';
 
-import { Bell, Menu, Mic, Search, Upload, User } from 'lucide-react';
+import { useState } from 'react';
 import Logo from './Logo';
 import { Button } from '../Button';
+import { ArrowLeft, Bell, Menu, Mic, Search, Upload, User } from 'lucide-react';
 
 const Navbar = () => {
+  const [showFullWidhtSearch,setShowFullWidhtSearch] = useState(false)
+
   return (
     <div
       className="
@@ -18,12 +21,12 @@ const Navbar = () => {
       "
     >
       <div
-        className="
-          flex
+        className={`
           gap-4
           items-center
           flex-shrink-0
-        "
+          ${showFullWidhtSearch? "hidden":"flex"}
+        `}
       >
         <Button variant="ghost" size="icon">
           <Menu />
@@ -31,7 +34,26 @@ const Navbar = () => {
         <Logo />
       </div>
 
-      <form className="hidden md:flex justify-center flex-grow gap-4">
+      <form className={`
+          justify-center 
+          flex-grow 
+          gap-4
+          ${showFullWidhtSearch? "flex":"hidden md:flex"}
+        `}
+      >
+
+        {showFullWidhtSearch && (
+          <Button 
+            onClick={()=>setShowFullWidhtSearch(false)}
+            type="button" 
+            size="icon" 
+            variant="ghost"
+            className="flex-shrink-0"
+          >
+            <ArrowLeft />
+          </Button>
+        )}
+
         <div className="flex flex-grow max-w-[600px]">
           <input
             type="search"
@@ -64,16 +86,33 @@ const Navbar = () => {
             <Search />
           </Button>
         </div>
-        <Button type="button" size="icon" className="flex-shrink-0">
+        <Button 
+          type="button" 
+          size="icon" 
+          className="flex-shrink-0">
           <Mic />
         </Button>
       </form>
 
-      <div className="flex flex-shrink-0 md:gap-2">
-        <Button size="icon" variant="ghost" className="md:hidden">
+      <div className={`
+          flex-shrink-0 
+          md:gap-2
+          ${showFullWidhtSearch? "hidden":"flex"}
+        `}
+      >
+        <Button 
+          onClick={()=> setShowFullWidhtSearch(true)}
+          size="icon" 
+          variant="ghost" 
+          className="md:hidden"
+        >
           <Search />
         </Button>
-        <Button size="icon" variant="ghost" className="md:hidden">
+        <Button 
+          size="icon" 
+          variant="ghost" 
+          className="md:hidden"
+        >
           <Mic />
         </Button>
         <Button size="icon" variant="ghost">
