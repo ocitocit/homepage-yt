@@ -3,15 +3,7 @@
 import { useState } from 'react';
 import Logo from './Logo';
 import { Button } from '../Button';
-import {
-  ArrowLeft,
-  Bell,
-  Menu,
-  Mic,
-  Search,
-  Upload,
-  User
-} from 'lucide-react';
+import { Menu } from 'lucide-react';
 import SearchBar from './SearchBar';
 import UserMenu from './UserMenu';
 
