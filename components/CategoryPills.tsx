@@ -1,4 +1,6 @@
-import React from 'react';
+'use client';
+
+import { useState } from 'react';
 import { Button } from './Button';
 
 interface CategoryPillsProps {
@@ -6,6 +8,8 @@ interface CategoryPillsProps {
 }
 
 const CategoryPills: React.FC<CategoryPillsProps> = ({ categories }) => {
+  const [selectedCategory, setSelectedCategory] = useState(categories[0]);
+
   return (
     <div className="overflow-x-hidden relative">
       <div
@@ -20,7 +24,8 @@ const CategoryPills: React.FC<CategoryPillsProps> = ({ categories }) => {
         {categories.map((category, index) => (
           <Button
             key={index}
-            variant="dark"
+            onClick={() => setSelectedCategory(category)}
+            variant={selectedCategory === category ? 'dark' : 'default'}
             className="
             py-1
             px-3
