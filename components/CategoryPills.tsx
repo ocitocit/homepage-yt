@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useRef, useState } from 'react';
 import { Button } from './Button';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 
@@ -11,12 +11,35 @@ interface CategoryPillsProps {
 const CategoryPills: React.FC<CategoryPillsProps> = ({ categories }) => {
   const [selectedCategory, setSelectedCategory] = useState(categories[0]);
 
-  const [isLeftVisible, setIsLeftVisible] = useState(true);
-  const [isRightVisible, setIsRightVisible] = useState(true);
+  const [isLeftVisible, setIsLeftVisible] = useState(false);
+  const [isRightVisible, setIsRightVisible] = useState(false);
+  const containerRef=useRef<HTMLDivElement>(null)
+
+  const [translate,setTranslate]=useState(0)
+
+  const TRANSLATE_AMOUNT=200
+
+  const onLeft =()=>{
+    setTranslate(translate=>{
+      const newTranslate=translate-TRANSLATE_AMOUNT
+      if(newTranslate <=0) return 0
+      return newTranslate
+    })
+  }
+
+  const onRight =()=>{
+    if(containerRef.current===null)return
+    setTranslate(translate=>{
+      const newTranslate=translate-TRANSLATE_AMOUNT
+      if(newTranslate <=0) return 0
+      return newTranslate
+    })
+  }
 
   return (
     <div className="overflow-x-hidden relative">
       <div
+        ref={containerRef}
         className="
           flex
           gap-3
@@ -24,6 +47,9 @@ const CategoryPills: React.FC<CategoryPillsProps> = ({ categories }) => {
           whitespace-nowrap
           transition-transform
         "
+        style={{
+          transform:`translateX(-${translate}px)`
+        }}
       >
         {categories.map((category, index) => (
           <Button
@@ -53,6 +79,7 @@ const CategoryPills: React.FC<CategoryPillsProps> = ({ categories }) => {
           "
         >
           <Button
+            onClick={onLeft}
             variant="ghost"
             size="icon"
             className="h-full w-auto p-1.5 aspect-square"
@@ -80,6 +107,7 @@ const CategoryPills: React.FC<CategoryPillsProps> = ({ categories }) => {
           "
         >
           <Button
+            onClick={onRight}
             variant="ghost"
             size="icon"
             className="h-full w-auto p-1.5 aspect-square"
