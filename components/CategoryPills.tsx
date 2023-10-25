@@ -55,6 +55,8 @@ const CategoryPills: React.FC<CategoryPillsProps> = ({ categories }) => {
       setIsRightVisible(translate + container.clientWidth< container.scrollWidth)
     })
 
+        observer.observe(containerRef.current)
+
     return ()=>{
       observer.disconnect()
     }
