@@ -44,24 +44,25 @@ const CategoryPills: React.FC<CategoryPillsProps> = ({ categories }) => {
     });
   };
 
-  useEffect(()=>{
-    if(containerRef.current == null)return
+  useEffect(() => {
+    if (containerRef.current == null) return;
 
-    const observer = new ResizeObserver(entries =>{
-      const container = entries[0]?.target
-      if (container==null)return
+    const observer = new ResizeObserver((entries) => {
+      const container = entries[0]?.target;
+      if (container == null) return;
 
-      setIsLeftVisible(translate>0)
-      setIsRightVisible(translate + container.clientWidth< container.scrollWidth)
-    })
+      setIsLeftVisible(translate > 0);
+      setIsRightVisible(
+        translate + container.clientWidth < container.scrollWidth
+      );
+    });
 
-        observer.observe(containerRef.current)
+    observer.observe(containerRef.current);
 
-    return ()=>{
-      observer.disconnect()
-    }
-
-  },[translate,categories])
+    return () => {
+      observer.disconnect();
+    };
+  }, [translate, categories]);
 
   return (
     <div ref={containerRef} className="overflow-x-hidden relative">
