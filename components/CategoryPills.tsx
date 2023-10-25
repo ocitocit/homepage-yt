@@ -13,33 +13,40 @@ const CategoryPills: React.FC<CategoryPillsProps> = ({ categories }) => {
 
   const [isLeftVisible, setIsLeftVisible] = useState(false);
   const [isRightVisible, setIsRightVisible] = useState(false);
-  const containerRef=useRef<HTMLDivElement>(null)
+  const containerRef = useRef<HTMLDivElement>(null);
 
-  const [translate,setTranslate]=useState(0)
+  const [translate, setTranslate] = useState(0);
 
-  const TRANSLATE_AMOUNT=200
+  const TRANSLATE_AMOUNT = 200;
 
-  const onLeft =()=>{
-    setTranslate(translate=>{
-      const newTranslate=translate-TRANSLATE_AMOUNT
-      if(newTranslate <=0) return 0
-      return newTranslate
-    })
-  }
+  const onLeft = () => {
+    setTranslate((translate) => {
+      const newTranslate = translate - TRANSLATE_AMOUNT;
+      if (newTranslate <= 0) return 0;
+      return newTranslate;
+    });
+  };
 
-  const onRight =()=>{
-    if(containerRef.current===null)return
-    setTranslate(translate=>{
-      const newTranslate=translate-TRANSLATE_AMOUNT
-      if(newTranslate <=0) return 0
-      return newTranslate
-    })
-  }
+  const onRight = () => {
+    setTranslate((translate) => {
+      if (containerRef.current === null) {
+        return translate;
+      }
+
+      const newTranslate = translate + TRANSLATE_AMOUNT;
+      const edge = containerRef.current.scrollWidth;
+      const width = containerRef.current.clientWidth;
+
+      if (newTranslate + width >= edge) {
+        return edge - width;
+      }
+      return newTranslate;
+    });
+  };
 
   return (
-    <div className="overflow-x-hidden relative">
+    <div ref={containerRef} className="overflow-x-hidden relative">
       <div
-        ref={containerRef}
         className="
           flex
           gap-3
@@ -48,7 +55,7 @@ const CategoryPills: React.FC<CategoryPillsProps> = ({ categories }) => {
           transition-transform
         "
         style={{
-          transform:`translateX(-${translate}px)`
+          transform: `translateX(-${translate}px)`
         }}
       >
         {categories.map((category, index) => (
