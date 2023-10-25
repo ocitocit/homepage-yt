@@ -1,6 +1,6 @@
 'use client';
 
-import { useRef, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { Button } from './Button';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 
@@ -43,6 +43,23 @@ const CategoryPills: React.FC<CategoryPillsProps> = ({ categories }) => {
       return newTranslate;
     });
   };
+
+  useEffect(()=>{
+    if(containerRef.current == null)return
+
+    const observer = new ResizeObserver(entries =>{
+      const container = entries[0]?.target
+      if (container==null)return
+
+      setIsLeftVisible(translate>0)
+      setIsRightVisible(translate + container.clientWidth< container.scrollWidth)
+    })
+
+    return ()=>{
+      observer.disconnect()
+    }
+
+  },[translate,categories])
 
   return (
     <div ref={containerRef} className="overflow-x-hidden relative">
