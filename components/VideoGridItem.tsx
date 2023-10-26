@@ -1,5 +1,6 @@
 'use client';
 
+import { formatDuration } from '@/libs/formatDuration';
 import Image from 'next/image';
 
 interface VideoGridItemProps {
@@ -55,7 +56,7 @@ const VideoGridItem: React.FC<VideoGridItemProps> = ({
             rounded
           "
         >
-          {duration}
+          {formatDuration(duration)}
         </div>
       </a>
     </div>
