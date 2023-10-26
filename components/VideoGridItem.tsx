@@ -1,7 +1,9 @@
 'use client';
 
 import { formatDuration } from '@/libs/formatDuration';
+import { formatTimeAgo } from '@/libs/formatTimeAgo';
 import Image from 'next/image';
+import { useRouter } from 'next/navigation';
 
 interface VideoGridItemProps {
   id: string;
@@ -28,9 +30,18 @@ const VideoGridItem: React.FC<VideoGridItemProps> = ({
   thumbnailUrl,
   videoUrl
 }) => {
+  const router = useRouter();
+
+  const VIEW_FORMATTER = new Intl.NumberFormat(undefined, {
+    notation: 'compact'
+  });
+
   return (
     <div className="flex flex-col gap-2">
-      <a href={`/watch?v=${id}`} className="relative aspect-video">
+      <div
+        onClick={() => router.push(`/watch?v=${id}`)}
+        className="relative aspect-video"
+      >
         <Image
           src={thumbnailUrl}
           fill
@@ -58,7 +69,38 @@ const VideoGridItem: React.FC<VideoGridItemProps> = ({
         >
           {formatDuration(duration)}
         </div>
-      </a>
+      </div>
+      <div className="flex gap-2">
+        <div
+          onClick={() => router.push(`/@${channel.id}`)}
+          className="flex-shrink-0"
+        >
+          <Image
+            width="100"
+            height="100"
+            src={channel.profileUrl}
+            alt={channel.name}
+            className="w-12 h-12 rounded-full"
+          />
+        </div>
+        <div className="flex flex-col">
+          <div
+            onClick={() => router.push(`/whatch?v=${id}`)}
+            className="font-bold"
+          >
+            {title}
+          </div>
+          <div
+            onClick={() => router.push(`/@${channel.id}`)}
+            className="text-sm text-secondary-text"
+          >
+            {channel.name}
+          </div>
+          <div className="text-sm text-secondary-text">
+            {VIEW_FORMATTER.format(views)} Views • {formatTimeAgo(postedAt)}
+          </div>
+        </div>
+      </div>
     </div>
   );
 };
