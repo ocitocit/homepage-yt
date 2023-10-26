@@ -1,5 +1,6 @@
 import CategoryPills from '@/components/CategoryPills';
-import { categories } from '@/libs/data';
+import VideoGridItem from '@/components/VideoGridItem';
+import { categories, videos } from '@/libs/data';
 
 const Home = () => {
   return (
@@ -15,6 +16,17 @@ const Home = () => {
       <div className="overflow-x-hidden px-8 pb-4">
         <div className="sticky top-0 z-10 bg-white pb-4">
           <CategoryPills categories={categories} />
+        </div>
+        <div
+          className="
+          grid
+          gap-4
+          grid-cols-[repeat(auto-fill,minmax(300px,1fr))]
+          "
+        >
+          {videos.map((video) => (
+            <VideoGridItem key={video.id} {...video} />
+          ))}
         </div>
       </div>
     </main>
