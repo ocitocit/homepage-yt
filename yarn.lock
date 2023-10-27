@@ -565,7 +565,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/react-dom@npm:^18":
+"@types/react-dom@npm:^18.2.14":
   version: 18.2.14
   resolution: "@types/react-dom@npm:18.2.14"
   dependencies:
@@ -992,7 +992,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"autoprefixer@npm:^10":
+"autoprefixer@npm:^10.4.16":
   version: 10.4.16
   resolution: "autoprefixer@npm:10.4.16"
   dependencies:
@@ -1962,7 +1962,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint@npm:^8":
+"eslint@npm:^8.52.0":
   version: 8.52.0
   resolution: "eslint@npm:8.52.0"
   dependencies:
@@ -2627,23 +2627,23 @@ __metadata:
     "@commitlint/config-conventional": "npm:^18.1.0"
     "@types/node": "npm:^20.8.9"
     "@types/react": "npm:^18.2.33"
-    "@types/react-dom": "npm:^18"
-    autoprefixer: "npm:^10"
+    "@types/react-dom": "npm:^18.2.14"
+    autoprefixer: "npm:^10.4.16"
     class-variance-authority: "npm:^0.7.0"
-    eslint: "npm:^8"
+    eslint: "npm:^8.52.0"
     eslint-config-next: "npm:^14.0.0"
-    husky: "npm:^8.0.0"
+    husky: "npm:^8.0.3"
     lint-staged: "npm:^15.0.2"
-    lucide-react: "npm:^0.289.0"
+    lucide-react: "npm:^0.290.0"
     next: "npm:^14.0.0"
-    postcss: "npm:^8"
+    postcss: "npm:^8.4.31"
     prettier: "npm:^3.0.3"
     prettier-plugin-tailwindcss: "npm:^0.5.6"
-    react: "npm:^18"
-    react-dom: "npm:^18"
+    react: "npm:^18.2.0"
+    react-dom: "npm:^18.2.0"
     tailwind-merge: "npm:^1.14.0"
     tailwindcss: "npm:^3.3.5"
-    typescript: "npm:^5"
+    typescript: "npm:^5.2.2"
   languageName: unknown
   linkType: soft
 
@@ -2714,7 +2714,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"husky@npm:^8.0.0":
+"husky@npm:^8.0.3":
   version: 8.0.3
   resolution: "husky@npm:8.0.3"
   bin:
@@ -3470,12 +3470,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"lucide-react@npm:^0.289.0":
-  version: 0.289.0
-  resolution: "lucide-react@npm:0.289.0"
+"lucide-react@npm:^0.290.0":
+  version: 0.290.0
+  resolution: "lucide-react@npm:0.290.0"
   peerDependencies:
     react: ^16.5.1 || ^17.0.0 || ^18.0.0
-  checksum: 9fce92d3afad1f58cc38c4c2c8b6e0ac26015832d0b5f86f1491f1e9c9c51a61dc11680aa4691d396707832597b304764e1f4e3e6ccbddea96a3c4b2c486aa69
+  checksum: 22e112608df0a566f0299be11ffd8893808d943a7dd0d78f1112f452eaa7c12986da4aa6b111ab9153c4e93ed17cfc0258f420fd9ac156aa611c40b1111b8f4e
   languageName: node
   linkType: hard
 
@@ -4294,7 +4294,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"postcss@npm:8.4.31, postcss@npm:^8, postcss@npm:^8.4.23":
+"postcss@npm:8.4.31, postcss@npm:^8.4.23, postcss@npm:^8.4.31":
   version: 8.4.31
   resolution: "postcss@npm:8.4.31"
   dependencies:
@@ -4416,7 +4416,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-dom@npm:^18":
+"react-dom@npm:^18.2.0":
   version: 18.2.0
   resolution: "react-dom@npm:18.2.0"
   dependencies:
@@ -4435,7 +4435,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react@npm:^18":
+"react@npm:^18.2.0":
   version: 18.2.0
   resolution: "react@npm:18.2.0"
   dependencies:
@@ -5402,7 +5402,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"typescript@npm:^5":
+"typescript@npm:^5.2.2":
   version: 5.2.2
   resolution: "typescript@npm:5.2.2"
   bin:
@@ -5412,7 +5412,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"typescript@patch:typescript@npm%3A^5#optional!builtin<compat/typescript>":
+"typescript@patch:typescript@npm%3A^5.2.2#optional!builtin<compat/typescript>":
   version: 5.2.2
   resolution: "typescript@patch:typescript@npm%3A5.2.2#optional!builtin<compat/typescript>::version=5.2.2&hash=f3b441"
   bin:
