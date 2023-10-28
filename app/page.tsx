@@ -1,5 +1,6 @@
 import CategoryPills from '@/components/CategoryPills';
 import VideoGridItem from '@/components/VideoGridItem';
+import SideBar from '@/components/sidebar/SideBar';
 import { categories, videos } from '@/libs/data';
 
 const Home = () => {
@@ -12,7 +13,7 @@ const Home = () => {
         overflow-auto
       "
     >
-      <div>SIDEBAR</div>
+      <SideBar />
       <div className="overflow-x-hidden px-8 pb-4">
         <div className="sticky top-0 z-10 bg-white pb-4">
           <CategoryPills categories={categories} />
