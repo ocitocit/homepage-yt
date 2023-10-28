@@ -99,6 +99,7 @@ const VideoGridItem: React.FC<VideoGridItemProps> = ({
             inset-0
             transition-opacity
             duration-200
+            cursor-pointer
             ${isVideoPlaying ? 'opacity-100 delay-200' : 'opacity-0'}
           `}
           muted
