@@ -5,14 +5,14 @@ const SmallSidebar = () => {
   return (
     <aside
       className="
-      top-0
-      sticky
-      overflow-y-auto
       scrollbar-hidden
-      pb-4
+      sticky
+      top-0
       ml-1
       flex
       flex-col
+      overflow-y-auto
+      pb-4
       lg:hidden
       "
     >

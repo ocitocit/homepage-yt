@@ -6,17 +6,17 @@ const LargeSidebar = () => {
   return (
     <aside
       className="
-        flex
-        flex-col
-        pb-4
-        px-2
-        w-56
-        lg:sticky
+        scrollbar-hidden
         absolute
         top-0
-        overflow-y-auto
-        scrollbar-hidden
+        flex
+        w-56
+        flex-col
         gap-2
+        overflow-y-auto
+        px-2
+        pb-4
+        lg:sticky
       "
     >
       <ContainerLargeSidebar>

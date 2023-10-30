@@ -13,7 +13,7 @@ const Logo = () => {
       width="100"
       height="100"
       priority
-      className="cursor-pointer h-6"
+      className="h-6 cursor-pointer"
     />
   );
 };

@@ -65,12 +65,12 @@ const VideoGridItem: React.FC<VideoGridItemProps> = ({
           fill
           className={`
             block
-            w-full
             h-full
-            object-cover
+            w-full
             cursor-pointer
-            duration-200
+            object-cover
             transition-[border-radius] 
+            duration-200
             ${isVideoPlaying ? 'rounded-none' : 'rounded-xl'}
           `}
           alt={title}
@@ -81,25 +81,25 @@ const VideoGridItem: React.FC<VideoGridItemProps> = ({
             absolute
             bottom-1
             right-1
-            bg-secondary-dark
-            text-secondary
-            text-sm
-            px-0.5
             rounded
+            bg-secondary-dark
+            px-0.5
+            text-sm
+            text-secondary
           "
         >
           {formatDuration(duration)}
         </div>
         <video
           className={`
-            block
-            h-full
-            object-cover
             absolute
             inset-0
+            block
+            h-full
+            cursor-pointer
+            object-cover
             transition-opacity
             duration-200
-            cursor-pointer
             ${isVideoPlaying ? 'opacity-100 delay-200' : 'opacity-0'}
           `}
           muted
@@ -118,19 +118,19 @@ const VideoGridItem: React.FC<VideoGridItemProps> = ({
             height="100"
             src={channel.profileUrl}
             alt={channel.name}
-            className="w-12 h-12 rounded-full cursor-pointer"
+            className="h-12 w-12 cursor-pointer rounded-full"
           />
         </div>
         <div className="flex flex-col">
           <div
             onClick={() => router.push(`/whatch?v=${id}`)}
-            className="font-bold cursor-pointer"
+            className="cursor-pointer font-bold"
           >
             {title}
           </div>
           <div
             onClick={() => router.push(`/@${channel.id}`)}
-            className="text-sm text-secondary-text cursor-pointer hover:text-secondary-dark-hover"
+            className="cursor-pointer text-sm text-secondary-text hover:text-secondary-dark-hover"
           >
             {channel.name}
           </div>

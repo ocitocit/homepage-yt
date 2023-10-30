@@ -23,7 +23,7 @@ const SmallIconSidebar: React.FC<SmallIconSidebarProps> = ({
       onClick={() => router.push(url)}
       className={twMerge(
         buttonStyle({ variant: 'ghost' }),
-        'py-4 px-1 flex flex-col items-center rounded-lg gap-1'
+        'flex flex-col items-center gap-1 rounded-lg px-1 py-4'
       )}
     >
       <Icon className="h-6 w-6" />

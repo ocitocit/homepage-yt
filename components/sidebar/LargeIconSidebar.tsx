@@ -23,21 +23,21 @@ const LargeIconSidebar: React.FC<LargeIconSidebarProps> = ({
       onClick={() => router.push(url)}
       className={twMerge(
         buttonStyle({ variant: 'ghost' }),
-        `flex w-full items-center p-3 gap-4 rounded-lg
+        `flex w-full items-center gap-4 rounded-lg p-3
          ${
            isActive
-             ? 'font-bold bg-neutral-100 hover:bg-secondary'
+             ? 'bg-neutral-100 font-bold hover:bg-secondary'
              : undefined
          }
         `
       )}
     >
-      <Icon className="w-6 h-6" />
+      <Icon className="h-6 w-6" />
       <div
         className="
+        overflow-hidden 
         text-ellipsis 
-        whitespace-nowrap 
-        overflow-hidden"
+        whitespace-nowrap"
       >
         {title}
       </div>

@@ -65,12 +65,12 @@ const CategoryPills: React.FC<CategoryPillsProps> = ({ categories }) => {
   }, [translate, categories]);
 
   return (
-    <div ref={containerRef} className="overflow-x-hidden relative">
+    <div ref={containerRef} className="relative overflow-x-hidden">
       <div
         className="
           flex
-          gap-3
           w-[max-content]
+          gap-3
           whitespace-nowrap
           transition-transform
         "
@@ -83,7 +83,7 @@ const CategoryPills: React.FC<CategoryPillsProps> = ({ categories }) => {
             key={index}
             onClick={() => setSelectedCategory(category)}
             variant={selectedCategory === category ? 'dark' : 'default'}
-            className="py-1 px-3 rounded-lg whitespace-nowrap"
+            className="whitespace-nowrap rounded-lg px-3 py-1"
           >
             {category}
           </Button>
@@ -96,20 +96,20 @@ const CategoryPills: React.FC<CategoryPillsProps> = ({ categories }) => {
             absolute
             left-0
             top-1/2
+            h-full
+            w-24
             -translate-y-1/2
             bg-gradient-to-r
             from-white
             from-50%
             to-transparent
-            w-24
-            h-full
           "
         >
           <Button
             onClick={onLeft}
             variant="ghost"
             size="icon"
-            className="h-full w-auto p-1.5 aspect-square"
+            className="aspect-square h-full w-auto p-1.5"
           >
             <ChevronLeft />
           </Button>
@@ -122,22 +122,22 @@ const CategoryPills: React.FC<CategoryPillsProps> = ({ categories }) => {
             absolute
             right-0
             top-1/2
+            flex
+            h-full
+            w-24
             -translate-y-1/2
+            justify-end
             bg-gradient-to-l
             from-white
             from-50%
             to-transparent
-            w-24
-            h-full
-            flex
-            justify-end
           "
         >
           <Button
             onClick={onRight}
             variant="ghost"
             size="icon"
-            className="h-full w-auto p-1.5 aspect-square"
+            className="aspect-square h-full w-auto p-1.5"
           >
             <ChevronRight />
           </Button>

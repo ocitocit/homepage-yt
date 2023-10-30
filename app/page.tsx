@@ -7,9 +7,9 @@ const Home = () => {
   return (
     <main
       className="
-        grid 
+        flex-grow-1 
+        grid
         grid-cols-[auto,1fr]
-        flex-grow-1
         overflow-auto
       "
     >
@@ -21,8 +21,8 @@ const Home = () => {
         <div
           className="
           grid
-          gap-4
           grid-cols-[repeat(auto-fill,minmax(300px,1fr))]
+          gap-4
           "
         >
           {videos.map((video) => (
