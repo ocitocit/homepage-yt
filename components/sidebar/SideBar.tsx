@@ -1,3 +1,4 @@
+'use client';
 import LargeSidebar from './LargeSidebar';
 import SmallSidebar from './SmallSidebar';
 
