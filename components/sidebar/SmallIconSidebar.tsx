@@ -3,15 +3,16 @@
 import { useRouter } from 'next/navigation';
 import { twMerge } from 'tailwind-merge';
 import { buttonStyle } from '../Button';
+import { LucideIcon } from 'lucide-react';
 
-interface ContainerSmallSidebarProps {
-  children: React.ReactNode;
+interface SmallIconSidebarProps {
+  icon: LucideIcon;
   title: string;
   url: string;
 }
 
-const ContainerSmallSidebar: React.FC<ContainerSmallSidebarProps> = ({
-  children,
+const SmallIconSidebar: React.FC<SmallIconSidebarProps> = ({
+  icon: Icon,
   title,
   url
 }) => {
@@ -25,10 +26,10 @@ const ContainerSmallSidebar: React.FC<ContainerSmallSidebarProps> = ({
         'py-4 px-1 flex flex-col items-center rounded-lg gap-1'
       )}
     >
-      {children}
+      <Icon className="h-6 w-6" />
       <div className="text-sm">{title}</div>
     </div>
   );
 };
 
-export default ContainerSmallSidebar;
+export default SmallIconSidebar;

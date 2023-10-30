@@ -1,5 +1,5 @@
 import { Clapperboard, Home, Library, Repeat } from 'lucide-react';
-import ContainerSmallSidebar from './ContainerSmallSidebar';
+import SmallIconSidebar from './SmallIconSidebar';
 
 const SmallSidebar = () => {
   return (
@@ -16,18 +16,14 @@ const SmallSidebar = () => {
       lg:hidden
       "
     >
-      <ContainerSmallSidebar title="Home" url="/">
-        <Home />
-      </ContainerSmallSidebar>
-      <ContainerSmallSidebar title="Short" url="/shorts">
-        <Repeat />
-      </ContainerSmallSidebar>
-      <ContainerSmallSidebar title="Subscriptions" url="/subscriptions">
-        <Clapperboard />
-      </ContainerSmallSidebar>
-      <ContainerSmallSidebar title="Library" url="/library">
-        <Library />
-      </ContainerSmallSidebar>
+      <SmallIconSidebar icon={Home} title="Home" url="/" />
+      <SmallIconSidebar icon={Repeat} title="Shorts" url="/shorts" />
+      <SmallIconSidebar
+        icon={Clapperboard}
+        title="Subscriptions"
+        url="/subscriptions"
+      />
+      <SmallIconSidebar icon={Library} title="Library" url="/library" />
     </aside>
   );
 };
