@@ -4,9 +4,11 @@ import { LucideIcon } from 'lucide-react';
 import { useRouter } from 'next/navigation';
 import { twMerge } from 'tailwind-merge';
 import { buttonStyle } from '../Button';
+import Image from 'next/image';
 
 interface LargeIconSidebarProps {
-  icon: LucideIcon;
+  icon?: LucideIcon;
+  imgSrc?: string;
   title: string;
   url: string;
   isActive?: boolean;
@@ -14,6 +16,7 @@ interface LargeIconSidebarProps {
 
 const LargeIconSidebar: React.FC<LargeIconSidebarProps> = ({
   icon: Icon,
+  imgSrc,
   title,
   url,
   isActive = false
@@ -29,7 +32,16 @@ const LargeIconSidebar: React.FC<LargeIconSidebarProps> = ({
         `
       )}
     >
-      <Icon className="h-6 w-6" />
+      {Icon && <Icon className="h-6 w-6" />}
+      {imgSrc && (
+        <Image
+          src={imgSrc}
+          height="100"
+          width="100"
+          alt={title}
+          className="h-6 w-6 rounded-full"
+        />
+      )}
       <div
         className="
         overflow-hidden 

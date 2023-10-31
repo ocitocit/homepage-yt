@@ -55,9 +55,9 @@ const LargeSidebar = () => {
       <hr />
       <ContainerLargeSidebar title="Subscriptions">
         {subscriptions.map((subscription) => (
-          <LargeUserSidebar
+          <LargeIconSidebar
             key={subscription.id}
-            imageUrl={subscription.imgUrl}
+            imgSrc={subscription.imgUrl}
             title={subscription.channelName}
             url={`/@${subscription.channelName}`}
           />
