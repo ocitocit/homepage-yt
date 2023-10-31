@@ -8,9 +8,9 @@ export const formatDuration = (duration: number) => {
   const seconds = duration % 60;
 
   if (hours > 0) {
-    return `${hours}:${LEADING_ZERO_FORMATTER.format(
-      minutes
-    )}:${LEADING_ZERO_FORMATTER.format(seconds)}`;
+    return `${hours}:${LEADING_ZERO_FORMATTER.format(minutes)}:${LEADING_ZERO_FORMATTER.format(
+      seconds
+    )}`;
   }
 
   return `${minutes}:${LEADING_ZERO_FORMATTER.format(seconds)}`;

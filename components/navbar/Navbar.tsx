@@ -13,20 +13,20 @@ const Navbar = () => {
   return (
     <div
       className="
-        flex
-        gap-10
-        lg:gap-20
-        justify-between
-        pt-2
-        mb-6
         mx-4
+        mb-6
+        flex
+        justify-between
+        gap-10
+        pt-2
+        lg:gap-20
       "
     >
       <div
         className={`
-          gap-4
-          items-center
           flex-shrink-0
+          items-center
+          gap-4
           ${showFullWidhtSearch ? 'hidden' : 'flex'}
         `}
       >
@@ -36,15 +36,9 @@ const Navbar = () => {
         <Logo />
       </div>
 
-      <SearchBar
-        fullSearch={showFullWidhtSearch}
-        setFullSearch={setShowFullWidhtSearch}
-      />
+      <SearchBar fullSearch={showFullWidhtSearch} setFullSearch={setShowFullWidhtSearch} />
 
-      <UserMenu
-        showFull={showFullWidhtSearch}
-        setShowFull={setShowFullWidhtSearch}
-      />
+      <UserMenu showFull={showFullWidhtSearch} setShowFull={setShowFullWidhtSearch} />
     </div>
   );
 };

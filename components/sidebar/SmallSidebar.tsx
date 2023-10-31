@@ -1,3 +1,5 @@
+'use client';
+
 import { Clapperboard, Home, Library, Repeat } from 'lucide-react';
 import SmallIconSidebar from './SmallIconSidebar';
 
@@ -18,11 +20,7 @@ const SmallSidebar = () => {
     >
       <SmallIconSidebar icon={Home} title="Home" url="/" />
       <SmallIconSidebar icon={Repeat} title="Shorts" url="/shorts" />
-      <SmallIconSidebar
-        icon={Clapperboard}
-        title="Subscriptions"
-        url="/subscriptions"
-      />
+      <SmallIconSidebar icon={Clapperboard} title="Subscriptions" url="/subscriptions" />
       <SmallIconSidebar icon={Library} title="Library" url="/library" />
     </aside>
   );

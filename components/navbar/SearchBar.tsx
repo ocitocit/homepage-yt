@@ -6,15 +6,12 @@ interface SearchBarProps {
   setFullSearch: (value: boolean) => void;
 }
 
-const SearchBar: React.FC<SearchBarProps> = ({
-  fullSearch,
-  setFullSearch
-}) => {
+const SearchBar: React.FC<SearchBarProps> = ({ fullSearch, setFullSearch }) => {
   return (
     <form
       className={`
-          justify-center 
           flex-grow 
+          justify-center 
           gap-4
           ${fullSearch ? 'flex' : 'hidden md:flex'}
         `}
@@ -31,33 +28,33 @@ const SearchBar: React.FC<SearchBarProps> = ({
         </Button>
       )}
 
-      <div className="flex flex-grow max-w-[600px]">
+      <div className="flex max-w-[600px] flex-grow">
         <input
           type="search"
           placeholder="Search"
           className="
-              rounded-l-full 
+              w-full 
+              rounded-l-full
               border
               border-secondary-border
+              px-4
+              py-1
+              text-lg
               shadow-inner
               shadow-secondary
-              py-1
-              px-4
-              text-lg
-              w-full
-              focus:border-blue-500
               outline-none
+              focus:border-blue-500
             "
         />
         <Button
           className="
-              px-4
-              py-2
+              flex-shrink-0
               rounded-r-full
               border
-              border-secondary-border
               border-l-0
-              flex-shrink-0
+              border-secondary-border
+              px-4
+              py-2
             "
         >
           <Search />

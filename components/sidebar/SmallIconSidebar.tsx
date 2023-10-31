@@ -11,11 +11,7 @@ interface SmallIconSidebarProps {
   url: string;
 }
 
-const SmallIconSidebar: React.FC<SmallIconSidebarProps> = ({
-  icon: Icon,
-  title,
-  url
-}) => {
+const SmallIconSidebar: React.FC<SmallIconSidebarProps> = ({ icon: Icon, title, url }) => {
   const router = useRouter();
 
   return (

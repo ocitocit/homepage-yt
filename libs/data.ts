@@ -32,8 +32,7 @@ export const videos = [
     postedAt: new Date('2023-08-29'),
     duration: 938,
     thumbnailUrl: 'https://i.ytimg.com/vi/B4Y9Ed4lLAI/maxresdefault.jpg',
-    videoUrl:
-      'https://storage.googleapis.com/gtv-videos-bucket/sample/ForBiggerJoyrides.mp4'
+    videoUrl: 'https://storage.googleapis.com/gtv-videos-bucket/sample/ForBiggerJoyrides.mp4'
   },
   {
     id: '2',
@@ -48,8 +47,7 @@ export const videos = [
     postedAt: new Date('2023-08-22'),
     duration: 732,
     thumbnailUrl: 'https://i.ytimg.com/vi/d6a8RymS1zI/maxresdefault.jpg',
-    videoUrl:
-      'https://storage.googleapis.com/gtv-videos-bucket/sample/ForBiggerJoyrides.mp4'
+    videoUrl: 'https://storage.googleapis.com/gtv-videos-bucket/sample/ForBiggerJoyrides.mp4'
   },
   {
     id: '3',
@@ -64,8 +62,7 @@ export const videos = [
     postedAt: new Date('2023-10-05'),
     duration: 120,
     thumbnailUrl: 'https://i.ytimg.com/vi/eYPyIq5Y3Rk/maxresdefault.jpg',
-    videoUrl:
-      'https://storage.googleapis.com/gtv-videos-bucket/sample/ForBiggerJoyrides.mp4'
+    videoUrl: 'https://storage.googleapis.com/gtv-videos-bucket/sample/ForBiggerJoyrides.mp4'
   },
   {
     id: '4',
@@ -80,8 +77,7 @@ export const videos = [
     postedAt: new Date('2023-9-19'),
     duration: 4343,
     thumbnailUrl: 'https://i.ytimg.com/vi/apdD69J4bEc/maxresdefault.jpg',
-    videoUrl:
-      'https://storage.googleapis.com/gtv-videos-bucket/sample/ForBiggerJoyrides.mp4'
+    videoUrl: 'https://storage.googleapis.com/gtv-videos-bucket/sample/ForBiggerJoyrides.mp4'
   },
   {
     id: '5',
@@ -96,8 +92,7 @@ export const videos = [
     postedAt: new Date('2023-03-02'),
     duration: 1000,
     thumbnailUrl: 'https://i.ytimg.com/vi/M3mGY0pgFk0/maxresdefault.jpg',
-    videoUrl:
-      'https://storage.googleapis.com/gtv-videos-bucket/sample/ForBiggerJoyrides.mp4'
+    videoUrl: 'https://storage.googleapis.com/gtv-videos-bucket/sample/ForBiggerJoyrides.mp4'
   },
   {
     id: '6',
@@ -112,8 +107,7 @@ export const videos = [
     postedAt: new Date('2023-03-03'),
     duration: 54,
     thumbnailUrl: 'https://i.ytimg.com/vi/i2JVQdLnkAY/maxresdefault.jpg',
-    videoUrl:
-      'https://storage.googleapis.com/gtv-videos-bucket/sample/ForBiggerJoyrides.mp4'
+    videoUrl: 'https://storage.googleapis.com/gtv-videos-bucket/sample/ForBiggerJoyrides.mp4'
   },
   {
     id: '7',
@@ -128,8 +122,7 @@ export const videos = [
     postedAt: new Date('2023-08-09'),
     duration: 100,
     thumbnailUrl: 'https://i.ytimg.com/vi/mVKAyw0xqxw/maxresdefault.jpg',
-    videoUrl:
-      'https://storage.googleapis.com/gtv-videos-bucket/sample/ForBiggerJoyrides.mp4'
+    videoUrl: 'https://storage.googleapis.com/gtv-videos-bucket/sample/ForBiggerJoyrides.mp4'
   },
   {
     id: '8',
@@ -144,7 +137,6 @@ export const videos = [
     postedAt: new Date('2023-09-09'),
     duration: 105,
     thumbnailUrl: 'https://i.ytimg.com/vi/kxT8-C1vmd4/maxresdefault.jpg',
-    videoUrl:
-      'https://storage.googleapis.com/gtv-videos-bucket/sample/ForBiggerJoyrides.mp4'
+    videoUrl: 'https://storage.googleapis.com/gtv-videos-bucket/sample/ForBiggerJoyrides.mp4'
   }
 ];

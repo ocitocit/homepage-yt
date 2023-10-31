@@ -52,9 +52,7 @@ const CategoryPills: React.FC<CategoryPillsProps> = ({ categories }) => {
       if (container == null) return;
 
       setIsLeftVisible(translate > 0);
-      setIsRightVisible(
-        translate + container.clientWidth < container.scrollWidth
-      );
+      setIsRightVisible(translate + container.clientWidth < container.scrollWidth);
     });
 
     observer.observe(containerRef.current);

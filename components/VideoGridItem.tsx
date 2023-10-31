@@ -56,10 +56,7 @@ const VideoGridItem: React.FC<VideoGridItemProps> = ({
       onMouseLeave={() => setisVideoPlaying(false)}
       className="flex flex-col gap-2"
     >
-      <div
-        onClick={() => router.push(`/watch?v=${id}`)}
-        className="relative aspect-video"
-      >
+      <div onClick={() => router.push(`/watch?v=${id}`)} className="relative aspect-video">
         <Image
           src={thumbnailUrl}
           fill
@@ -109,10 +106,7 @@ const VideoGridItem: React.FC<VideoGridItemProps> = ({
         />
       </div>
       <div className="flex gap-2">
-        <div
-          onClick={() => router.push(`/@${channel.id}`)}
-          className="flex-shrink-0"
-        >
+        <div onClick={() => router.push(`/@${channel.id}`)} className="flex-shrink-0">
           <Image
             width="100"
             height="100"
