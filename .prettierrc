@@ -6,7 +6,6 @@
   "singleQuote": true,
   "trailingComma": "none",
   "bracketSpacing": true,
-  "fluid": false,
   "htmlWhitespaceSensitivity": "ignore",
   "proseWrap": "always",
   "tailwindConfig": "./tailwind.config.ts",
