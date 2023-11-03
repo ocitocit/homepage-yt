@@ -3,6 +3,7 @@
 import LargeIconSidebar from './LargeIconSidebar';
 import ContainerLargeSidebar from './ContainerLargeSidebar';
 import { playlists, subscriptions } from '@/libs/sidebarData';
+import { useSidebarContext } from '@/context/SidebarContext';
 import {
   Clapperboard,
   Clock,
@@ -24,15 +25,16 @@ import {
   ShoppingBag,
   Trophy
 } from 'lucide-react';
+import LeftSideMenu from '../navbar/LeftSideMenu';
 
 const LargeSidebar = () => {
+  const { isLargeOpen, isSmallOpen } = useSidebarContext();
   return (
     <aside
-      className="
+      className={`
         scrollbar-hidden
         absolute
         top-0
-        hidden
         w-56
         flex-col
         gap-2
@@ -40,9 +42,24 @@ const LargeSidebar = () => {
         px-2
         pb-4
         lg:sticky
-        lg:flex
-      "
+        ${isLargeOpen ? 'lg:flex' : 'lg:hidden'}
+        ${isSmallOpen ? 'z-[999] flex max-h-screen bg-white' : 'hidden'}
+      `}
     >
+      <div
+        className="
+          sticky 
+          top-0 
+          bg-white 
+          px-2 
+          pb-4 
+          pt-2 
+          lg:hidden
+        "
+      >
+        <LeftSideMenu />
+      </div>
+
       <ContainerLargeSidebar>
         <LargeIconSidebar isActive icon={Home} title="Home" url="/" />
         <LargeIconSidebar icon={Repeat} title="Shorts" url="/shorts" />

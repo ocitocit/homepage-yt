@@ -1,11 +1,9 @@
 'use client';
 
 import { useState } from 'react';
-import Logo from './Logo';
-import { Button } from '../Button';
-import { Menu } from 'lucide-react';
 import SearchBar from './SearchBar';
 import UserMenu from './UserMenu';
+import LeftSideMenu from './LeftSideMenu';
 
 const Navbar = () => {
   const [showFullWidhtSearch, setShowFullWidhtSearch] = useState(false);
@@ -22,20 +20,7 @@ const Navbar = () => {
         lg:gap-20
       "
     >
-      <div
-        className={`
-          flex-shrink-0
-          items-center
-          gap-4
-          ${showFullWidhtSearch ? 'hidden' : 'flex'}
-        `}
-      >
-        <Button variant="ghost" size="icon">
-          <Menu />
-        </Button>
-        <Logo />
-      </div>
-
+      <LeftSideMenu hidden={showFullWidhtSearch} />
       <SearchBar fullSearch={showFullWidhtSearch} setFullSearch={setShowFullWidhtSearch} />
 
       <UserMenu showFull={showFullWidhtSearch} setShowFull={setShowFullWidhtSearch} />
