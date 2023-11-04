@@ -21,62 +21,61 @@ export const categories = [
 export const videos = [
   {
     id: '1',
-    title: 'CSS Anchor Is The Best New CSS Feature Since Flexbox',
+    title: 'Creativity in Support of Palestine',
     channel: {
-      name: 'Web Dev Simplified',
-      id: 'WebDevSimplified',
-      profileUrl:
-        'https://yt3.ggpht.com/ytc/APkrFKZWeMCsx4Q9e_Hm6nhOOUQ3fv96QGUXiMr1-pPP=s48-c-k-c0x00ffffff-no-rj'
+      name: 'ocitocit',
+      id: 'ocitocit',
+      profileUrl: '/images/ocit.png'
     },
     views: 222536,
-    postedAt: new Date('2023-08-29'),
+    postedAt: new Date('2023-11-05'),
     duration: 938,
-    thumbnailUrl: 'https://i.ytimg.com/vi/B4Y9Ed4lLAI/maxresdefault.jpg',
+    thumbnailUrl: '/images/water-melon.webp',
     videoUrl: 'https://storage.googleapis.com/gtv-videos-bucket/sample/ForBiggerJoyrides.mp4'
   },
   {
     id: '2',
-    title: 'NEW Way To Create Variables In JavaScript',
+    title: 'CARA CEPAT BELAJAR CODING!! 🤩',
     channel: {
-      name: 'Web Dev Simplified',
-      id: 'WebDevSimplified',
+      name: 'Web Programming UNPAS',
+      id: 'WebProgrammingUNPAS',
       profileUrl:
-        'https://yt3.ggpht.com/ytc/APkrFKZWeMCsx4Q9e_Hm6nhOOUQ3fv96QGUXiMr1-pPP=s48-c-k-c0x00ffffff-no-rj'
+        'https://yt3.googleusercontent.com/ytc/APkrFKbCNUxuEPo4jL4a7clmkUy2Lgd3ic7Ze04FBbr0SA=s176-c-k-c0x00ffffff-no-rj'
     },
     views: 257136,
-    postedAt: new Date('2023-08-22'),
+    postedAt: new Date('2023-06-22'),
     duration: 732,
-    thumbnailUrl: 'https://i.ytimg.com/vi/d6a8RymS1zI/maxresdefault.jpg',
+    thumbnailUrl: 'https://i3.ytimg.com/vi/CN_Kt91GtqM/maxresdefault.jpg',
     videoUrl: 'https://storage.googleapis.com/gtv-videos-bucket/sample/ForBiggerJoyrides.mp4'
   },
   {
     id: '3',
-    title: 'Front-end developer takes on a CSS battle',
+    title: 'Fokus Satu Bahasa Koding - Untuk Calon Programmer',
     channel: {
-      name: 'Kevin Powell',
-      id: 'KevinPowell',
+      name: 'Programmer Zaman Now',
+      id: 'ProgrammerZamanNow',
       profileUrl:
-        'https://yt3.ggpht.com/ytc/APkrFKa6XiLa13mMVPzkmmTBcgNPjjqCGPrY86KfJFmf5w=s48-c-k-c0x00ffffff-no-rj'
+        'https://yt3.googleusercontent.com/ytc/APkrFKZLaIW6VxBb7KOELbkAJOlNSFr5hQA0DWtUx5JnAg=s176-c-k-c0x00ffffff-no-rj'
     },
     views: 1232300,
-    postedAt: new Date('2023-10-05'),
+    postedAt: new Date('2023-10-31'),
     duration: 120,
-    thumbnailUrl: 'https://i.ytimg.com/vi/eYPyIq5Y3Rk/maxresdefault.jpg',
+    thumbnailUrl: 'https://i3.ytimg.com/vi/9rw5Sqnh90Y/maxresdefault.jpg',
     videoUrl: 'https://storage.googleapis.com/gtv-videos-bucket/sample/ForBiggerJoyrides.mp4'
   },
   {
     id: '4',
-    title: 'Quick guide to CSS focus states',
+    title: 'Tutorial REACT "Paling Masuk Akal" untuk PEMULA 🤩🌐',
     channel: {
-      name: 'Kevin Powell',
-      id: 'KevinPowell',
+      name: 'Web Programming UNPAS',
+      id: 'WebProgrammingUNPAS',
       profileUrl:
-        'https://yt3.ggpht.com/ytc/APkrFKa6XiLa13mMVPzkmmTBcgNPjjqCGPrY86KfJFmf5w=s48-c-k-c0x00ffffff-no-rj'
+        'https://yt3.googleusercontent.com/ytc/APkrFKbCNUxuEPo4jL4a7clmkUy2Lgd3ic7Ze04FBbr0SA=s176-c-k-c0x00ffffff-no-rj'
     },
     views: 112,
-    postedAt: new Date('2023-9-19'),
+    postedAt: new Date('2023-05-19'),
     duration: 4343,
-    thumbnailUrl: 'https://i.ytimg.com/vi/apdD69J4bEc/maxresdefault.jpg',
+    thumbnailUrl: 'https://i3.ytimg.com/vi/kcnwI_5nKyA/maxresdefault.jpg',
     videoUrl: 'https://storage.googleapis.com/gtv-videos-bucket/sample/ForBiggerJoyrides.mp4'
   },
   {
