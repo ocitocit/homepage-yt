@@ -14,10 +14,11 @@ const SmallSidebar = () => {
         sticky
         top-0
         ml-1
-        flex
+        hidden
         flex-col
         overflow-y-auto
         pb-4
+        md:flex
         ${isLargeOpen ? 'lg:hidden' : 'lg:flex'}
      `}
     >
