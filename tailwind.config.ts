@@ -1,5 +1,4 @@
 import type { Config } from 'tailwindcss';
-import colors from 'tailwindcss/colors';
 
 const config: Config = {
   content: [
@@ -7,16 +6,19 @@ const config: Config = {
     './components/**/*.{js,ts,jsx,tsx,mdx}',
     './app/**/*.{js,ts,jsx,tsx,mdx}'
   ],
+  darkMode: 'class',
   theme: {
     extend: {
       colors: {
         secondary: {
-          DEFAULT: colors.neutral[200],
-          hover: colors.neutral[300],
-          border: colors.neutral[400],
-          text: colors.neutral[500],
-          dark: colors.neutral[800],
-          ['dark-hover']: colors.neutral[900]
+          DEFAULT: 'rgb(var(--neu-200) / <alpha-value>)',
+          hover: 'rgb(var(--neu-300) / <alpha-value>)',
+          border: 'rgb(var(--neu-400) / <alpha-value>)',
+          text: 'rgb(var(--neu-500) / <alpha-value>)',
+          dark: 'rgb(var(--neu-800) / <alpha-value>)',
+          accent1: 'rgb(var(--accent1)/<alpha-value>)',
+          accent2: 'rgb(var(--accent2)/<alpha-value>)',
+          ['dark-hover']: 'rgb(var(--neu-900) / <alpha-value>)'
         }
       }
     }

@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import './globals.css';
 import Navbar from '@/components/navbar/Navbar';
-import SidebarProvider from '@/context/SidebarContext';
+import { Provider } from '@/components/provider/Provider';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -13,12 +13,17 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <body className={inter.className}>
-        <SidebarProvider>
+        <Provider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange
+        >
           <Navbar />
           {children}
-        </SidebarProvider>
+        </Provider>
       </body>
     </html>
   );

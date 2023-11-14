@@ -15,7 +15,7 @@ const SideBar = () => {
             fixed
             inset-0
             z-[999]
-            bg-secondary-dark
+            bg-slate-800
             opacity-50
             lg:hidden
           "

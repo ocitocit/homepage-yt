@@ -15,7 +15,7 @@ const Home = () => {
     >
       <SideBar />
       <div className="overflow-x-hidden px-8 pb-4">
-        <div className="sticky top-0 z-10 bg-white pb-4">
+        <div className="sticky top-0 z-10 bg-secondary-accent1 pb-4">
           <CategoryPills categories={categories} />
         </div>
         <div

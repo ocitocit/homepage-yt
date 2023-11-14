@@ -98,7 +98,7 @@ const CategoryPills: React.FC<CategoryPillsProps> = ({ categories }) => {
             w-24
             -translate-y-1/2
             bg-gradient-to-r
-            from-white
+            from-secondary-accent1
             from-50%
             to-transparent
           "
@@ -126,7 +126,7 @@ const CategoryPills: React.FC<CategoryPillsProps> = ({ categories }) => {
             -translate-y-1/2
             justify-end
             bg-gradient-to-l
-            from-white
+            from-secondary-accent1
             from-50%
             to-transparent
           "

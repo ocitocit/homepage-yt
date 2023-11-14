@@ -43,7 +43,7 @@ const LargeSidebar = () => {
         pb-4
         lg:sticky
         ${isLargeOpen ? 'lg:flex' : 'lg:hidden'}
-        ${isSmallOpen ? 'z-[999] flex max-h-screen bg-white' : 'hidden'}
+        ${isSmallOpen ? 'z-[999] flex max-h-screen bg-secondary-accent1' : 'hidden'}
       `}
     >
       <div
@@ -51,9 +51,10 @@ const LargeSidebar = () => {
           sticky 
           top-0 
           bg-white 
-          px-2 
+          px-2
           pb-4 
           pt-2 
+          dark:bg-black 
           lg:hidden
         "
       >

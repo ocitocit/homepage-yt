@@ -28,7 +28,7 @@ const LargeIconSidebar: React.FC<LargeIconSidebarProps> = ({
       className={twMerge(
         buttonStyle({ variant: 'ghost' }),
         `flex w-full cursor-pointer items-center gap-4 rounded-lg p-3
-         ${isActive ? 'bg-neutral-100 font-bold hover:bg-secondary' : undefined}
+         ${isActive ? 'bg-secondary-accent2 font-bold hover:bg-secondary' : undefined}
         `
       )}
     >

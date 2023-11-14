@@ -27,3 +27,26 @@ body {
 .scrollbar-hidden:hover::-webkit-scrollbar-thumb {
   @apply bg-secondary-border;
 }
+@layer base {
+  :root {
+    --neu-200: 229 229 229;
+    --neu-300: 212 212 212;
+    --neu-400: 163 163 163;
+    --neu-500: 115 115 115;
+    --neu-800: 38 38 38;
+    --neu-900: 23 23 23;
+    --accent1: 255 255 255;
+    --accent2: 243 244 246;
+  }
+
+  .dark {
+    --neu-200: 23 23 23;
+    --neu-300: 38 38 38;
+    --neu-400: 115 115 115;
+    --neu-500: 163 163 163;
+    --neu-800: 255 255 255;
+    --neu-900: 255 255 255;
+    --accent1: 18 18 18;
+    --accent2: 39 39 39;
+  }
+}
