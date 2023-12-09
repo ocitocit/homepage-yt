@@ -1,9 +1,20 @@
 'use client';
 
 import { useTheme } from 'next-themes';
+import { useEffect, useState } from 'react';
 
 const ThemeSwitcher = () => {
   const { setTheme } = useTheme();
+  const [isMount, setIsMount] = useState(false);
+
+  useEffect(() => {
+    setIsMount(true);
+  }, []);
+
+  if (!isMount) {
+    return null;
+  }
+
   return (
     <div
       className="
